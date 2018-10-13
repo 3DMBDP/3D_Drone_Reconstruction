@@ -47,4 +47,6 @@
 - [2013. P. Moulon, P. Monasse, R. Marlet. Global Fusion of Relative Motions for Robust, Accurate and Scalable Structure from Motion.](http://imagine.enpc.fr/~moulonp/publis/iccv2013/index.html)
 - [2011. C. Wu, S. Agarwal, B. Curless, S. Seitz. Multicore Bundle Adjustment.](http://grail.cs.washington.edu/projects/mcba/pba.pdf)
 - [CS231A: Computer Vision, From 3D Reconstruction to Recognition](http://web.stanford.edu/class/cs231a/course_notes.html)
+- https://www.mathworks.com/help/vision/examples/structure-from-motion-from-two-views.html
+- https://www.mathworks.com/help/vision/examples/structure-from-motion-from-multiple-views.html
 
