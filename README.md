@@ -50,3 +50,9 @@
 - https://www.mathworks.com/help/vision/examples/structure-from-motion-from-two-views.html
 - https://www.mathworks.com/help/vision/examples/structure-from-motion-from-multiple-views.html
 
+---
+## Open Source Test
+- Bundler: need a binary format SIFT, and core dump with our images.
+- VisualSFM: not opensource, and SIFT cost too much time
+	- CMVS fault(need more binary download from elsewhere);
+	- wrong camera position
