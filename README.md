@@ -13,6 +13,7 @@ A completely integration of 3D reconstruction software:
 
 ## Components
 ~A script to combine the packages will be uploaded~
+
 For now, user need to download and compile dependencies manually:
 ```
 	git submodule update --init
@@ -42,8 +43,8 @@ Get feature points, we used Lowe's program but failed to generate feasible solut
 		- Compile
 
 - BRISK
-		- ~Scipt to use BRISK to do featrue detec will be uploaded~
-		- OpenCV provide us with an implemented BRICK algorithm:
+	- ~Scipt to use BRISK to do featrue detec will be uploaded~
+	- OpenCV provide us with an implemented BRICK algorithm:
 ```c++
 #include <iostream>
 #include <vector>
