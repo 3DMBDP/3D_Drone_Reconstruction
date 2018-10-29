@@ -1,0 +1,6 @@
+[submodule "prog/OpenSIFT"]
+	path = prog/OpenSIFT
+	url = https://github.com/robwhess/opensift
+[submodule "prog/Bundler"]
+	path = prog/Bundler
+	url = https://github.com/snavely/bundler_sfm
