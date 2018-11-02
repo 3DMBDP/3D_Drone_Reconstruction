@@ -1,4 +1,4 @@
-TEST RUN
+# TEST RUN
 
 Download the following files:
 * helperEstimateRelativePose.m
