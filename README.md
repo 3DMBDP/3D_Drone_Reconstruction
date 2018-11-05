@@ -3,6 +3,13 @@
 - Read materials on reconstruction
 - Run VisualSFM to get a adaptable result which is shown on sprint 2 pre
 - **Start to solve background and feature detector problem**
+## Dependency
+To run our source code, add the following dependency:
+- Opencv(v>=3)
+- BOOST Lib
+```
+sudo apt-get install libboost-all-dev
+```
 ## Demo
 A completely integration of 3D reconstruction software:
 - [VisualSFM](https://ccwu.me/vsfm/)
@@ -26,7 +33,6 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/bundler/bin
 ```
 
 Dependency:
-- OpenCV(at least v2.3)
 - [GDK/GTK](http://www.gtk.org)(at least v2.18.4)
 - jhead
 - ImageMagick

@@ -1,11 +1,14 @@
-#include <boost/filesystem.hpp>
+#include <iostream>
+#include "opencv2/opencv.hpp"
+#include "opencv2/core/cvstd.hpp"
+#include <vector>
 
-IMG_PATH = "../../img"
+const char* IMG_PATH = "../../img/*.JPG";
 
-void main(){
-	boost::filesystem::directory_iterator itr(boost::filesystem::path(IMG_PATH));
-	for(itr; itr != boost::filesystem::directory_iterator(); ++itr)
-		if(itr->path().extension().string() == ".JPG"{
-
-				}
+int main(){
+	std::vector<cv::String> filenames;
+	cv::glob(IMG_PATH, filenames);
+	for(size_t i = 0; i < filenames.size(); i++)
+		std::cout<<filenames[i]<<std::endl;
 }
+
