@@ -1,6 +1,6 @@
-[submodule "prog/Bundler"]
-	path = prog/Bundler
-	url = https://github.com/snavely/bundler_sfm
-[submodule "prog/Feature_Detection/opensift"]
-	path = prog/Feature_Detection/opensift
+[submodule "deps/Feature_Detection/opensift"]
+	path = deps/Feature_Detection/opensift
 	url = git@github.com:robwhess/opensift.git
+[submodule "deps/bundler"]
+	path = deps/bundler
+	url = git@github.com:snavely/bundler_sfm.git
