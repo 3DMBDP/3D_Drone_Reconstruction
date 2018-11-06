@@ -49,29 +49,14 @@ Get feature points, we used Lowe's program but failed to generate feasible solut
 		- Compile
 
 - BRISK
-	- ~Scipt to use BRISK to do featrue detec will be uploaded~
-	- OpenCV provide us with an implemented BRICK algorithm:
-```c++
-#include <iostream>
-#include <vector>
-#include <opencv2/core/core.hpp>
-#include <opencv2/features2d/features2d.hpp>
-#include <opencv2/highgui/highgui.hpp>
 
-static void Brisk(thresh, octaves){
-	for(int i = 0; i < file_num; i++){
-		//Read in images
-		cv::Mat pic = cv::imread(file[i]);
-		
-		cv::BRISK brisk(thresh, octaves, 1);
-		brisk.create("Brisk");
+OpenCV provide us with an implemented BRICK algorithm:
 
-		std::vector<cv::KeyPoint> keypoints;
-		brisk.detect(pic, keypoints);
-	}		
-}
-```
-
+To run the code:
+- Put the image need to process in `meandir/img`
+- Enter dir `cd src/brisk`
+- `make`
+- `make run` 
 ## SFM
 We refered to Bundler to do SFM, and replace the feature detection part ourselves;
 

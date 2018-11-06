@@ -31,7 +31,7 @@ int main(){
 
 	std::ofstream ofile;
 
-	for(size_t i = 0; i < 1/*filenames.size()*/; i++){
+	for(size_t i = 0; i < filenames.size(); i++){
 		img = cv::imread(filenames[i]);
 		std::cout<<"Processing "<<filenames[i]<<"..."<<std::endl;
 		brisk->detect(img, keypoints);
