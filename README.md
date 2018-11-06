@@ -56,7 +56,22 @@ To run the code:
 - Put the image need to process in `meandir/img`
 - Enter dir `cd src/brisk`
 - `make`
-- `make run` 
+- `make run`
+
+And output will be `imgname.sift`, where the ascii format will be original lowes sift format:
+> The file format starts with 2 integers giving the total number of
+keypoints and the length of the descriptor vector for each keypoint
+(128). 
+> Then the location of each keypoint in the image is specified by
+4 floating point numbers giving subpixel row and column location,
+scale, and orientation (in radians from -PI to PI).  Obviously, these
+numbers are not invariant to viewpoint, but can be used in later
+stages of processing to check for geometric consistency among matches.
+> Finally, the invariant descriptor vector for the keypoint is given as
+a list of 128 integers in range [0,255].  Keypoints from a new image
+can be matched to those from previous images by simply looking for the
+descriptor vector with closest Euclidean distance among all vectors
+from previous images.
 ## SFM
 We refered to Bundler to do SFM, and replace the feature detection part ourselves;
 
