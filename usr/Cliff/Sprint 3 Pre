@@ -1,0 +1,135 @@
+\documentclass[slidestop,compress,mathserif,c]{beamer}
+\usepackage{setspace}
+\usepackage{color}
+
+\usetheme{Antibes}
+\usecolortheme{lily}
+
+\title{3-D Modeling based on Drone Photometry}
+\subtitle{Sprint 3 - Presentation \& Demonstration}
+\author{Chunpeng Wang \and Xinggao Yang \and Ayush Shirsat \and Julie Park}
+\institute{\emph{Electrical \& Comuputer Engineering Department, Boston University \\ Mechanical Engineering Department, Boston University}}
+\date{\today}
+
+\makeatletter
+% add a macro that saves its argument
+\newcommand{\footlineextra}[1]{\gdef\insertfootlineextra{#1}}
+\newbox\footlineextrabox
+ 
+% add a beamer template that sets the saved argument in a box.
+% The * means that the beamer font and color "footline extra" are automatically added. 
+\defbeamertemplate*{footline extra}{default}{
+  \begin{beamercolorbox}[ht=2.25ex,dp=1ex,leftskip=\Gm@lmargin]{footline extra}
+    \insertfootlineextra
+    % \par\vspace{2.5pt}
+  \end{beamercolorbox}
+}
+ 
+\addtobeamertemplate{footline}{%
+  % set the box with the extra footline material but make it add no vertical space
+  \setbox\footlineextrabox=\vbox{\usebeamertemplate*{footline extra}}
+  \vskip -\ht\footlineextrabox
+  \vskip -\dp\footlineextrabox
+  \box\footlineextrabox%
+}
+{}
+ 
+% patch \begin{frame} to reset the footline extra material
+\let\beamer@original@frame=\frame
+\def\frame{\gdef\insertfootlineextra{}\beamer@original@frame}
+\footlineextra{}
+\makeatother
+
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+      \usebeamerfont{author in head/foot}{Group 9}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+      \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+      \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+    \end{beamercolorbox}}%
+  \vskip0pt%
+
+}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
+
+    \section{Previous Work}
+    \begin{frame}{Previous Work}
+        Images from three different angles:
+        \begin{enumerate}
+            \item Down-Angle
+            \item Horizontal-Angle
+            \item \alert{Up-Angle}
+        \end{enumerate}
+    \end{frame}
+    
+    \section{Progress in Sprint 3}
+    \subsection{Image Subtraction}
+    \begin{frame}{Progress in Sprint 3}{Image Subtraction}
+        \begin{itemize}
+            \item 20 Down-Angle images.
+            \item Subtracted from the original images.
+            \item SIFT to do the feature extraction.
+        \end{itemize}
+    \end{frame}
+    
+    \subsection{Feature Detector - BRISK}
+    \begin{frame}{Progress in Sprint 3}{Feature Detector - BRISK}
+    Feature Detectors:
+        \begin{itemize}
+            \item SIFT
+                \begin{itemize}
+                    \item Lowe's binary
+                    \item OpenSIFT
+                \end{itemize}
+            \item \alert{BRISK}: The output does not match, needs transformation
+        \end{itemize}
+    \end{frame}
+    
+    \section{Result of Sprint 3}
+    \begin{frame}{Result of Sprint 3}
+        \begin{itemize}
+            \item 76 Down-Angle pictures (subtracted)
+            \item Result in two communication towers.
+        \end{itemize}
+    \end{frame}
+    
+    \section{Future Work}
+    \begin{frame}{Future Work}
+        \begin{itemize}
+            \item Bad quality images:\\
+            Sunlight towards the camera $\rightarrow$ glare in the picture.
+            \item Most of the feature points are on background.
+        \end{itemize}
+    \end{frame}
+    
+    \section*{}
+		\begin{frame}
+			\begin{center}
+				\Huge{Q \& A}
+			\end{center}
+		\end{frame}
+    
+    \section*{}
+		\begin{frame}
+			\begin{center}
+				\Huge{Thank You!}
+			\end{center}
+		\end{frame}
+
+\end{document}
