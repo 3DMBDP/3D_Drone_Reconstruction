@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Sep  8 09:39:49 2018
-
 @author: Ayush Shirsat
 """
 import os
