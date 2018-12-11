@@ -50,7 +50,7 @@ int main(){
 		ofile.open(newname_temp.c_str());
 
 		// output in lowe's sift ascii format
-		ofile<<keypoints.size()<<" "<<descriptor.rows<<std::endl;
+		ofile<<keypoints.size()<<" "<<descriptor.cols<<std::endl;
 		//TODO However, not so sure of the pixel coordinate order, test later
 		int j;
 		std::vector<cv::KeyPoint>::iterator it;
