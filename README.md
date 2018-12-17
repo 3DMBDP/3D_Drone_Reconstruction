@@ -19,7 +19,6 @@ A completely integration of 3D reconstruction software:
 		- simply follow the guide in the website
 
 ## Components
-~A script to combine the packages will be uploaded~
 
 For now, user need to download and compile dependencies manually:
 ```
@@ -79,4 +78,29 @@ To run bundler, simply entering the directory of feature detection results and r
 ```
 	python utils/bundler.py
 ```
-Note that it should be the right path of bundler.py, and the script to integrate them will be uploaded
+Note that it should be the right path of bundler.py, and the script to integrate them will be uploaded.
+
+## Unet
+
+We implemented a Unet model to segment out tower from images with complex background.
+130 masks were manually created and augmented. Images were rotated flipped and blurred to increase dataset size.
+
+Total images: 4000
+
+Total masks (labels): 4000
+
+Training loss: 0.2660
+
+Training accuracy: 88.44%
+
+Validation loss: 0.2744
+
+Validation accuracy: 87.84%
+
+Test accuracy: 87.93%
+
+
+
+
+
+
